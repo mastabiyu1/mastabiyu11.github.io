@@ -13,22 +13,30 @@ Creates an object that contains the following information from the "this" object
 }	
 */
 function analyzer() {
-
-	this.name=nam;
-	this.country=country;
-	this.grades=grades;
-	let sum=0;
-	for( this.numProperties in obj){
-		     sum++;
-
+	let myobj = {};
+	let prop = Object.keys(this);
+	let val = Object.values(this);
+	
+	myobj.numProperties = prop.length;
+	
+	let countNum = 0;
+	for (let part of prop) {
+	
+	if (part.length < 3) countNum++;
 	}
-	for(let i=0;i<Person.length;i++){
-		
+	myobj.cntShortName = countNum;
+	
+	let countObj = 0;
+	for (let part of val) {
+	
+	if (typeof part === "object") {
+	countObj++;
 	}
-
-	return {};
-}
-
+	}
+	myobj.cntReference = countObj;
+	
+	return myobj;
+	}
 /* Constructor for a person object
 	Person(name, country, grades) creates object
 	{
@@ -64,14 +72,6 @@ function Person(name, country, grades) {
 	};		
 }
  
-
-
-
-
-
-
-
-
 
 
 
