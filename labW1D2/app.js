@@ -5,8 +5,6 @@
 // See tests.js for behavior
 function nameString(obj) {
   
-  
-        
         if (obj === undefined) {
         return "no object passed";
         } else if (obj === null) {
