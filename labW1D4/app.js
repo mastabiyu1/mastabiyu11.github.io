@@ -65,7 +65,17 @@ function makePositive(array) {
 // Replaces sequences of 0s with an "*", e.g.
 // removeZeros([3, 0, 0, 0, 5, 6, 0, 0, 7, 0]) returns [3, "*", 5, "*", 7, "*"];
 function removeZeros(array) {
+	let arr=[];
+    let newArr=[]; 
+        for(let i=0;i<array.length;i++){
+            if(array[i]===0){
+                 array[i]="*";
+            }
+            arr.push(array[i]);
+        }
+		return arr;
+    }
 
-}
+
 
 
