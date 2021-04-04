@@ -75,7 +75,5 @@ function removeZeros(array) {
         }
 		return arr;
     }
-
-
-
+	///////////////////////////
 

@@ -24,23 +24,23 @@ function mochaTests() {
 			let result = JSON.parse(localStorage.getItem("CS303test"));
             assert.equal(result.name, "bob");
         });
-	});		
-    
+	});
+
 	describe("getFromLocalStorage", function () {
         it("get", function () {
 			let result = getFromLocalStorage("CS303test");
             assert.equal(result.country, "usa");
         });
-	});		
+	});
 
 	describe("addMissingProperties", function () {
         it("location not present", function () {
 			let obj = {name:"bob", school:"miu"};
 			obj.f = addMissingProperty;
 			obj.f({location:"fairfield"});
-            assert.equal(obj.location, "fairfield");
+            assert.equal(obj.location ,"fairfield");
         });
-	});	
+	});
 
 	describe("addMissingProperties", function () {
         it("location present", function () {
